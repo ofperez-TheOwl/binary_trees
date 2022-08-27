@@ -31,7 +31,8 @@ size_t binary_tree_depth(const binary_tree_t *tree)
  * Return: binary_tree_t; ancestor of first and second or NULL
  * TheOwl
  */
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+		const binary_tree_t *second)
 {
 	int delta_depth, i;
 
@@ -47,7 +48,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 		for (i = 0; i < delta_depth; i++)
 		{
 			if (second->parent == first)
-				return (binary_tree_t *)(first);
+				return ((binary_tree_t *)(first));
 			printf("checking for second is deeper\n");
 			second = second->parent;
 		}
@@ -57,7 +58,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tr
 		for (i = 0; i < delta_depth; i++)
 		{
 			if (first->parent == second)
-				return (binary_tree_t *)(second);
+				return ((binary_tree_t *)(second));
 			printf("checking for first is deeper\n");
 			first = first->parent;
 		}

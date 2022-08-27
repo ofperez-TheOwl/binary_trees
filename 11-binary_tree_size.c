@@ -4,7 +4,7 @@
  * binary_tree_size - computes the size of a binary tree
  * @tree: binary_tree_t pointer; root node of the tree to process
  *
- * Return: size_t; size of tree
+ * Return: size_t; size of tree (every nodes of the tree)
  * TheOwl
  */
 size_t binary_tree_size(const binary_tree_t *tree)
